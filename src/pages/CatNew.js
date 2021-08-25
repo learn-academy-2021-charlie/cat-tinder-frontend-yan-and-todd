@@ -1,7 +1,6 @@
-import { Button } from 'bootstrap'
 import React, {Component} from 'react'
 import { Redirect } from 'react-router-dom'
-import {Form, FormGroup, Input, Label } from 'reactstrap'
+import {Button, Form, FormGroup, Input, Label } from 'reactstrap'
 
 class CatNew extends Component{
     constructor(props) {
