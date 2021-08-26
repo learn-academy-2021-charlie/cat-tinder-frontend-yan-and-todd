@@ -1,7 +1,6 @@
-import { Button } from 'bootstrap'
 import React, {Component} from 'react'
 import { Redirect } from 'react-router-dom'
-import {Form, FormGroup, Input, Label } from 'reactstrap'
+import {Button, Form, FormGroup, Input, Label } from 'reactstrap'
 
 class CatNew extends Component{
     constructor(props) {
@@ -21,15 +20,16 @@ class CatNew extends Component{
         form[e.target.name] = e.target.value
         this.setState({form: form})
     }
+
     handleSubmit = () => {
         this.props.createCat(this.state.form)
-        this.setState({submitted: ture})
+        this.setState({submitted: true})
     }
     
     render(){
         return(
         <>
-            <h3>I am the new page.</h3>
+            <h3>Please create your cat's profile!</h3>
             <Form>
                 <FormGroup>
                     <Label for="name">Name</Label>
@@ -60,8 +60,8 @@ class CatNew extends Component{
                         value={this.state.form.enjoys}
                     />
                 </FormGroup>
-                        onChange={this.handleChange}
-                <Button name="submit">
+                <br/>
+                <Button name="submit" onClick={this.handleSubmit}>
                     Add New Cat
                 </Button>
             </Form>

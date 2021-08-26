@@ -1,19 +1,29 @@
 import React,{Component} from 'react'
 import {NavLink} from 'react-router-dom'
+import {Card, Button, CardTitle, Row, Col} from 'reactstrap'
 
 class CatIndex extends Component{
     render(){
+        let {cats} = this.props
         return(
-        <>
-            <h3>I am the index page.</h3>
-            {this.props.cats && this.props.cats.map(cat =>{
+        <div className="page-body">
+            <h3>Meet the Cats!</h3>
+            <div className="index-cards">
+            {cats && cats.map(cat =>{
                 return(
-                    <p key={cat.id}>
-                        <NavLink to={`/catshow/${cat.id}`}>{cat.name}</NavLink>
-                    </p>
+                    <Row key={cat.id}>
+                        <Col sm="6">
+                            <Card body>
+                                <CardTitle tag="h5">Hi, My name is {cat.name}</CardTitle>
+                                <h2>&#128049;</h2>
+                                <NavLink to={`/catshow/${cat.id}`}><Button>More Info Here</Button></NavLink>
+                            </Card>
+                        </Col>
+                    </Row>
                 )
             })}
-        </>
+            </div>
+        </div>
         )
     }
 }
