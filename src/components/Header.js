@@ -16,6 +16,9 @@ class Header extends Component {
           <ul>
             <NavLink to="/catnew">Add a Cat</NavLink>
           </ul>
+          <ul>
+            <NavLink to="/info">About Us</NavLink>
+          </ul>
         </div>
       </header>
     )

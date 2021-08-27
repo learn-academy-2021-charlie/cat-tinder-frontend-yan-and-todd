@@ -7,6 +7,7 @@ import CatNew from './pages/CatNew'
 import CatShow from './pages/CatShow'
 import CatEdit from './pages/CatEdit'
 import NotFound from './pages/NotFound'
+import Info from './pages/Info'
 import './App.css'
 import {
   BrowserRouter as Router,
@@ -14,7 +15,7 @@ import {
   Switch
 }from 'react-router-dom'
 
-import cats from './mockCats.js'
+//import cats from './mockCats.js'
 
 class App extends Component{
   constructor(props){
@@ -84,6 +85,8 @@ class App extends Component{
           <Switch>
             {/* Read Functionality */}
             <Route exact path="/" component={Home} />
+
+            <Route exact path="/info" component={Info} />
 
             <Route path="/catindex" render={(props) => <CatIndex cats={this.state.cats} />} />
 
