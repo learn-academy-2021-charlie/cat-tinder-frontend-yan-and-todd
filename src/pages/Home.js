@@ -8,7 +8,9 @@ class Home extends Component{
         return(
         <div className="page-body">
             <h3>Weclome to Cat Tinder!</h3>
-                <h5>Love Live Life</h5>
+                <h5>Live Love Life</h5>
+                <br/>
+                <br/>
                 <ul>We built a Tinder for cats. </ul>
                 <ul> The app lets you swipe through </ul>
                 <ul>Cute profiles of cats looking for a home. </ul> 
