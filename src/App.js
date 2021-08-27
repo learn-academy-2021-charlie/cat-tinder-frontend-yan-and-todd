@@ -20,20 +20,61 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      cats: cats
+      // remove the mockCats-->[]empty array
+      cats: []
     }
   }
 
+  componentDidMount(){
+    this.readCat()
+  }
+
+  readCat = () =>{
+    fetch("http://localhost:3000/cats")
+    .then(response => response.json())
+    // get the catArray object form db
+    .then(catArray => this.setState({cats: catArray}))
+    // handle the error
+    .catch(errors => console.log("Cat read errors:",errors))
+  }
+
   createCat = (newCat) =>{
-    console.log(newCat)
+    fetch("http://localhost:3000/cats",{
+      body: JSON.stringify(newCat),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method:"POST"
+    })
+    .then(response => response.json())
+    .then(payload => this.readCat())
+    //include the new thing we just create
+    .then(errors => console.log("Cat create errors:", errors))
   }
 
   updateCat = (editCat, id) =>{
-    console.log(editCat, id)
+    fetch(`http://localhost:3000/cats/${id}`,{
+      body: JSON.stringify(editCat),
+      headers:{
+        "Content-Type": "application/json"
+      },
+      method:"PATCH"
+    })
+    .then(response => response.json())
+    .then(payload => this.readCat())
+    .catch(errors => console.log("Cat update errors:", errors))
   }
 
   deleteCat = (id) =>{
-    console.log(id)
+    fetch(`http://localhost:3000/cats/${id}`,{
+      headers:{
+        "Content-Type": "application/json"
+      },
+      method:"DELETE"
+    })
+    .then(response => response.json())
+    .then(payload => this.readCat())
+    .catch(errors => console.log("Cat delete errors:", errors))
   }
   
   render(){

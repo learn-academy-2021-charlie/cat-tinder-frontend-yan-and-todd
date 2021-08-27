@@ -1,44 +1,105 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, cursive;
+}
+
+body{
+  background-image: url("./assets/bg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
-.page-body{
+.page-body {
   text-align: center;
   margin: 3rem;
   height: 110vh;
 }
 
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+ul{
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+/* ---HEADER--- */
+header {
+  background-color:white;
+  display: flex;
+  justify-content: space-between;
+}
 .cat-logo {
-  height: 20vmin;
-  align-items: flex-start;
-  pointer-events: none;
+  width: 150px;
+  margin-left: 20px;
 }
-
-
-.App-header {
-  background-color:pink;
-  min-height: 10vh;
+.nav-links {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-right: 50px;
 }
 
-.App-footer {
-  background-color:#414245;
-  min-height: 10vh;
+/* ---FOOTER--- */
+footer {
+  font-size: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color:white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+}
+a {
+  color: #434343!important;
+  text-decoration: none !important;
+}
+a:hover {
+  cursor: pointer !important;
+  color: #434343!important;
+  text-decoration: underline !important;
+}
+/* ---FORMS--- */
+form {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+input {
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* ---HOME--- */
+
+/* ---INDEX--- */
+.index-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-
-
+.card.card-body {
+  width: 300px;
+  background-color: #FFFEF1;
+  margin: 20px;
+}
+.btn.btn-secondary {
+  background-color: #cdcdcd;
+  font-weight: bolder;
+}
+.btn.btn-secondary:hover {
+  color:orangered;
+  background-color: white;
+}
+/* ---NOT FOUND--- */
+.cat-friend {
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+/* ---SHOW--- */
+.card-show.card.card-body {
+  margin: 0 auto;
+}
