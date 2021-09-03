@@ -9,10 +9,7 @@ class Footer extends Component{
           <NavLink to="/">&copy; 2021 Yan & Todd</NavLink>
         </ul>
         <ul>
-          <NavLink to="/catindex">Meet the Cats</NavLink>
-        </ul>
-        <ul>
-          <NavLink to="/catnew">Add a Cat</NavLink>
+          <NavLink to="/catindex">Subscribe &#x1F4EB;</NavLink>
         </ul>
       </footer>
     )
