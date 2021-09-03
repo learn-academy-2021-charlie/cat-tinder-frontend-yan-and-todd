@@ -14,6 +14,7 @@ class Home extends Component{
                 <ul>We built a Tinder for cats. </ul>
                 <ul> The app lets you swipe through </ul>
                 <ul>Cute profiles of cats looking for a home. </ul> 
+                <br/>
                 <NavLink to={`/info`}><Button>Read more</Button></NavLink>      
                 <br/>
                 <br/>

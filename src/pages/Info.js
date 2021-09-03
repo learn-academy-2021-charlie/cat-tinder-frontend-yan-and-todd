@@ -31,6 +31,7 @@ class Info extends Component{
                     <Label><h4>Contact Email</h4></Label>
                     <Input type="text"/>
                 </FormGroup>
+                <br/>
                 <NavLink to={`/home`}><Button>Submit</Button></NavLink>   
             </Form>
         </div>
